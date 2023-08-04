@@ -28,23 +28,23 @@ class SysConfigVAAPIConan(ConanFile):
             raise ConanInvalidConfiguration("This recipe supports only Linux and FreeBSD")
 
     def system_requirements(self):
-        dnf = package_manager.Dnf(self)
-        dnf.install(["libva-devel"], update=True, check=True)
+        #dnf = package_manager.Dnf(self)
+        #dnf.install(["libva-devel"], update=True, check=True)
 
-        yum = package_manager.Yum(self)
-        yum.install(["libva-devel"], update=True, check=True)
+        #yum = package_manager.Yum(self)
+        #yum.install(["libva-devel"], update=True, check=True)
 
-        apt = package_manager.Apt(self)
-        apt.install(["libva-dev"], update=True, check=True)
+        #apt = package_manager.Apt(self)
+        #apt.install(["libva-dev"], update=True, check=True)
 
-        pacman = package_manager.PacMan(self)
-        pacman.install(["libva"], update=True, check=True)
+        #pacman = package_manager.PacMan(self)
+        #pacman.install(["libva"], update=True, check=True)
 
-        zypper = package_manager.Zypper(self)
-        zypper.install(["libva-devel"], update=True, check=True)
+        #zypper = package_manager.Zypper(self)
+        #zypper.install(["libva-devel"], update=True, check=True)
 
-        pkg = package_manager.Pkg(self)
-        pkg.install(["libva"], update=True, check=True)
+        #pkg = package_manager.Pkg(self)
+        #pkg.install(["libva"], update=True, check=True)
 
     def package_info(self):
         if self.settings.os in ["Linux", "FreeBSD"]:
